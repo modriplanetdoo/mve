@@ -25,13 +25,13 @@ SFM_NAMESPACE_BEGIN
 class ExhaustiveMatching : public MatchingBase
 {
 public:
-    ~ExhaustiveMatching (void) override = default;
+    virtual ~ExhaustiveMatching (void) override = default;
 
     /** Initialize matcher by preprocessing given SIFT/SURF features. */
-    void init (bundler::ViewportList* viewports) override;
+    virtual void init (bundler::ViewportList* viewports) override;
 
     /** Matches all feature types yielding a single matching result. */
-    void pairwise_match (int view_1_id, int view_2_id,
+    virtual void pairwise_match (int view_1_id, int view_2_id,
         Matching::Result* result) const override;
 
     /**
