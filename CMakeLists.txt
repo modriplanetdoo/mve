@@ -60,12 +60,12 @@ if(MSVC)
 endif()
 
 # Install 3rd party libraries
-if(WIN32)
-	set(LIBPNG_DLL "3rdparty/bin/libpng16.dll")
-	set(ZLIB_DLL "3rdparty/bin/zlib.dll")
-	set(LIBTIFF_DLL "3rdparty/bin/libtiff.dll")
-	install(FILES ${LIBPNG_DLL} ${ZLIB_DLL} ${LIBTIFF_DLL} DESTINATION .)
-endif()
+# if(WIN32)
+	# set(LIBPNG_DLL "3rdparty/bin/libpng16.dll")
+	# set(ZLIB_DLL "3rdparty/bin/zlib.dll")
+	# set(LIBTIFF_DLL "3rdparty/bin/libtiff.dll")
+	# install(FILES ${LIBPNG_DLL} ${ZLIB_DLL} ${LIBTIFF_DLL} DESTINATION .)
+# endif()
 
 add_subdirectory(libs)
 add_subdirectory(apps)
