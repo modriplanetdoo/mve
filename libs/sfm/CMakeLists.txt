@@ -5,3 +5,5 @@ add_library(mve_sfm STATIC ${SOURCES} ${HEADERS})
 set_target_properties(mve_sfm PROPERTIES DEBUG_POSTFIX ${MVE_LIBS_DEBUG_POSTFIX})
 target_link_libraries(mve_sfm mve)
 
+install(TARGETS mve_sfm DESTINATION lib)
+install(FILES ${HEADERS} DESTINATION include/mve/sfm)

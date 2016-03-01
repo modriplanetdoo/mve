@@ -5,3 +5,6 @@ file (GLOB SOURCES "[^_]*.cc")
 #        In the future, this will be replaced with something else when CMake
 #        makes header only libraries/targets first class citizens.
 add_custom_target(mve_math SOURCES ${SOURCES} ${HEADERS})
+
+# no mve_math lib to install
+install(FILES ${HEADERS} DESTINATION include/mve/math)

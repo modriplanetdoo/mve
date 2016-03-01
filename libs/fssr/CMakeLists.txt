@@ -4,3 +4,6 @@ file (GLOB SOURCES "[^_]*.cc")
 add_library(mve_fssr STATIC ${SOURCES} ${HEADERS})
 set_target_properties(mve_fssr PROPERTIES DEBUG_POSTFIX ${MVE_LIBS_DEBUG_POSTFIX})
 target_link_libraries(mve_fssr ${JPEG_LIBRARIES} ${PNG_LIBRARIES} ${TIFF_LIBRARIES})
+
+install(TARGETS mve_fssr DESTINATION lib)
+install(FILES ${HEADERS} DESTINATION include/mve/fssr)

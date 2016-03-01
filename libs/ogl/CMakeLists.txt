@@ -18,3 +18,5 @@ target_link_libraries(mve_ogl
 	${MVE_OGL_LIBS}
 )
 
+install(TARGETS mve_ogl DESTINATION lib)
+install(FILES ${HEADERS} DESTINATION include/mve/ogl)

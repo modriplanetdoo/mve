@@ -3,3 +3,6 @@ file (GLOB SOURCES "[^_]*.cc")
 
 add_library(mve_util STATIC ${SOURCES} ${HEADERS})
 set_target_properties(mve_util PROPERTIES DEBUG_POSTFIX ${MVE_LIBS_DEBUG_POSTFIX})
+
+install(TARGETS mve_util DESTINATION lib)
+install(FILES ${HEADERS} DESTINATION include/mve/util)

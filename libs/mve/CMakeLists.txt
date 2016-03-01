@@ -4,3 +4,6 @@ file (GLOB SOURCES "[^_]*.cc")
 add_library(mve STATIC ${SOURCES} ${HEADERS})
 set_target_properties(mve PROPERTIES DEBUG_POSTFIX ${MVE_LIBS_DEBUG_POSTFIX})
 target_link_libraries(mve ${JPEG_LIBRARIES} ${PNG_LIBRARIES} ${TIFF_LIBRARIES})
+
+install(TARGETS mve DESTINATION lib)
+install(FILES ${HEADERS} DESTINATION include/mve)
