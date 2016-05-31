@@ -33,7 +33,7 @@ void
 View::load_view (std::string const& user_path)
 {
     std::string safe_path = util::fs::sanitize_path(user_path);
-    safe_path = util::fs::abspath(safe_path);
+    //safe_path = util::fs::abspath(safe_path);
     this->deprecated_format_check(safe_path);
 
     /* Open meta.ini and populate images and blobs. */

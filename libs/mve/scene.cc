@@ -164,13 +164,13 @@ Scene::init_views (void)
     ViewList temp_list;
     int max_id = 0;
     for (std::size_t i = 0; i < views_dir.size(); ++i)
-    {
+	{
         if (views_dir[i].name.size() < 4)
             continue;
         if (util::string::right(views_dir[i].name, 4) != ".mve")
             continue;
         View::Ptr view = View::create();
-        view->load_view(views_dir[i].get_absolute_name());
+		view->load_view(views_dir[i].path + "/" + views_dir[i].name);//.get_absolute_name());
         temp_list.push_back(view);
         max_id = std::max(max_id, view->get_id());
     }
