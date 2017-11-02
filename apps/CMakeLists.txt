@@ -19,7 +19,7 @@ if(WIN32 AND MSVC)
         endif()
 
         include(InstallRequiredSystemLibraries)
-        set(OpenMP_REDIST_LIB "${MSVC${MSVC_VER}_REDIST_DIR}/${CMAKE_MSVC_ARCH}/Microsoft.VC${MSVC_VER}0.OpenMP/vcomp${MSVC_VER}0.dll")
+        set(OpenMP_REDIST_LIB "${MSVC_REDIST_DIR}/${CMAKE_MSVC_ARCH}/Microsoft.VC${MSVC_VER}0.OpenMP/vcomp${MSVC_VER}0.dll")
         install(PROGRAMS ${OpenMP_REDIST_LIB} DESTINATION ${CMAKE_INSTALL_SYSTEM_RUNTIME_DESTINATION})
     endif()
 endif()
